@@ -7,50 +7,55 @@ const sinners = [
     '07', '08', '09', '10', '11', '12'
 ];
 const DEBUG = true;
+const WRITE_TO_FILE = false;
 
 
-try {
-    let data = {};
+function main() {
+    try {
+        let data = {};
 
-    // Get list of all IDs
-    const idDataList = getIdDataList();
-    const passiveDataList = getPassiveDataList();
-    const passiveDataList2 = getPassiveDataList2();
-    const skillDataList = getSkillDataList();
-    const idTextList = combineTextLists(getIdTextList);
-    const passiveTextList = combineTextLists(getPassiveTextList);
-    const skillTextList = combineTextLists(getSkillTextList);
+        // Get list of all IDs
+        const idDataList = getIdData();
+        const passiveDataList = getIdPassiveMap();
+        const passiveDataList2 = getPassiveData();
+        const skillDataList = getSkillData();
+        const idTextList = combineTextLists(getIdTextList);
+        const passiveTextList = combineTextLists(getPassiveTextList);
+        const skillTextList = combineTextLists(getSkillTextList);
 
-    const idList = combineIdLists(idDataList, idTextList);
-    const skillList = combineSkillLists(skillDataList, skillTextList);
-    // Multiple passives per ID, so needs to be a special case
-    const passiveList = combinePassiveLists(passiveDataList, passiveDataList2, passiveTextList);
+        const idList = combineIdLists(idDataList, idTextList);
+        const skillList = combineSkillLists(skillDataList, skillTextList);
+        // Multiple passives per ID, so needs to be a special case
+        const passiveList = combinePassiveLists(passiveDataList, passiveDataList2, passiveTextList);
 
-    // Finalize list
-    data = combineIntoIdList(idList, passiveList, skillList);
+        // Finalize list
+        data = combineIntoIdList(idList, passiveList, skillList);
 
-    let originalDataSize = JSON.stringify(data).length;
-    console.log("Dataset Size: %d", originalDataSize);
+        let originalDataSize = JSON.stringify(data).length;
+        console.log("Dataset Size: %d", originalDataSize);
 
-    if (!DEBUG) {
-        data = cleanData(data);
-        let cleanedDataSize = JSON.stringify(data).length;
-        console.log(
-            "Cleaned Size: %d (%f%)",
-            cleanedDataSize,
-            ((cleanedDataSize / originalDataSize) * 100).toFixed(2)
-        );
+        if (!DEBUG) {
+            data = cleanData(data);
+            let cleanedDataSize = JSON.stringify(data).length;
+            console.log(
+                "Cleaned Size: %d (%f%)",
+                cleanedDataSize,
+                ((cleanedDataSize / originalDataSize) * 100).toFixed(2)
+            );
+        }
+
+        // Create/overwrite file and write DATA object
+        if (WRITE_TO_FILE) {
+            fs.writeFileSync(
+                'generated/data.js',
+                `const DATA = ${JSON.stringify(data, null, DEBUG ? 2 : 0)};` +
+                `module.exports = { DATA };`,
+                { encoding: 'utf-8', flag: 'w' }
+            );
+        }
+    } catch (err) {
+        console.log(err);
     }
-
-    // Create/overwrite file and write DATA object
-    fs.writeFileSync(
-        'generated/data.js',
-        `const DATA = ${JSON.stringify(data, null, DEBUG ? 2 : 0)};` +
-        `module.exports = { DATA };`,
-        { encoding: 'utf-8', flag: 'w' }
-    );
-} catch (err) {
-    console.log(err);
 }
 
 
@@ -149,17 +154,41 @@ function cleanPassiveData(obj) {
 }
 
 
-function getIdDataList() {
-    // personality-YY.json
-    // Data Structure: { "list": [...] }
-    const files = sinners.map((v) => `${folder}/personality-${v}.json`);
+// ID Data
+// personality-YY.json
+// Data Structure: { "list": [...] }
+function getIdData() {
     try {
-        let list = [];
-        for (let f of files) {
-            const obj = JSON.parse(fs.readFileSync(f));
-            list = list.concat(obj['list']);
-        }
-        return list;
+        const filenames = sinners.map((n) => `${folder}/personality-${n}.json`);
+        return filenames.flatMap((f) => JSON.parse(fs.readFileSync(f))['list']);
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
+}
+
+
+// ID to Passive Map
+// personality-passive-YY.json
+// Data Structure: { "list": [...] }
+function getIdPassiveMap() {
+    try {
+        const filenames = sinners.map((v) => `${folder}/personality-passive-${v}.json`);
+        return filenames.flatMap((f) => JSON.parse(fs.readFileSync(f))['list']);
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
+}
+
+
+// Passive Data
+// passive.json / passive_check4.json (Uptie 4)
+// Data Structure: { "list": [...] }
+function getPassiveData() {
+    try {
+        return JSON.parse(fs.readFileSync(`${folder}/passive.json`))['list']
+            .concat(JSON.parse(fs.readFileSync(`${folder}/passive_check4.json`))['list']);
     } catch (err) {
         console.log(err);
     }
@@ -167,52 +196,13 @@ function getIdDataList() {
 }
 
 
-function getPassiveDataList() {
-    // personality-passive-YY.json
-    // Data Structure: { "list": [...] }
-    const files = sinners.map((v) => `${folder}/personality-passive-${v}.json`);
+// Skill Data
+// personality-skill-YY.json
+// Data Structure: { "list": [...] }
+function getSkillData() {
     try {
-        let list = [];
-        for (let f of files) {
-            const obj = JSON.parse(fs.readFileSync(f));
-            list = list.concat(obj['list']);
-        }
-        return list;
-    } catch (err) {
-        console.log(err);
-    }
-    return [];
-}
-
-
-function getPassiveDataList2() {
-    // passive.json
-    // passive_check4.json (Uptie 4)
-    // Data Structure: { "list": [...] }
-    try {
-        let list = [];
-        const obj = JSON.parse(fs.readFileSync(`${folder}/passive.json`));
-        const obj2 = JSON.parse(fs.readFileSync(`${folder}/passive_check4.json`));
-        list = list.concat(obj['list']).concat(obj2['list']);
-        return list;
-    } catch (err) {
-        console.log(err);
-    }
-    return [];
-}
-
-
-function getSkillDataList() {
-    // personality-skill-YY.json
-    // Data Structure: { "list": [...] }
-    const files = sinners.map((v) => `${folder}/personality-skill-${v}.json`);
-    try {
-        let list = [];
-        for (let f of files) {
-            const obj = JSON.parse(fs.readFileSync(f));
-            list = list.concat(obj['list']);
-        }
-        return list;
+        const filenames = sinners.map((v) => `${folder}/personality-skill-${v}.json`);
+        return filenames.flatMap((f) => JSON.parse(fs.readFileSync(f))['list']);
     } catch (err) {
         console.log(err);
     }
@@ -420,3 +410,6 @@ function combineIntoIdList(idList, passiveList, skillList) {
     }
     return finalList;
 }
+
+
+main();
