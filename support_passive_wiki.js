@@ -28,7 +28,8 @@ for (let x of DATA) {
 
 for (let s of sinner) {
     output += `== ${s} ==\n`;
-    output += `{| class="mw-collapsible ` + (COLLAPSED ? `mw-collapsed ` : ``) + `article-table sortable" style="width:100%;"\n`;
+    output += `{| class="lcbtable2 mw-collapsible ` + (COLLAPSED ? `mw-collapsed ` : ``) + `sortable" `;
+    output += `style="width:100%; margin:auto" cellpadding="3"\n`;
     output += `! width="15%" | Identity \n`;
     output += `! width="10%" | Name \n`;
     output += `! width="40px" | Sin \n`;
