@@ -8,6 +8,7 @@ const sinners = [
 ];
 const DEBUG = false;
 
+
 try {
     let data = {};
 
