@@ -7,7 +7,7 @@ const sinners = [
     '07', '08', '09', '10', '11', '12'
 ];
 const DEBUG = true;
-const WRITE_TO_FILE = false;
+const WRITE_TO_FILE = true;
 
 
 function main() {
