@@ -6,7 +6,7 @@ const sinners = [
     '01', '02', '03', '04', '05', '06',
     '07', '08', '09', '10', '11', '12'
 ];
-const DEBUG = false;
+const DEBUG = true;
 
 
 try {
@@ -15,6 +15,7 @@ try {
     // Get list of all IDs
     const idDataList = getIdDataList();
     const passiveDataList = getPassiveDataList();
+    const passiveDataList2 = getPassiveDataList2();
     const skillDataList = getSkillDataList();
     const idTextList = combineTextLists(getIdTextList);
     const passiveTextList = combineTextLists(getPassiveTextList);
@@ -23,9 +24,11 @@ try {
     const idList = combineIdLists(idDataList, idTextList);
     const skillList = combineSkillLists(skillDataList, skillTextList);
     // Multiple passives per ID, so needs to be a special case
-    const passiveList = combinePassiveLists(passiveDataList, passiveTextList);
+    const passiveList = combinePassiveLists(passiveDataList, passiveDataList2, passiveTextList);
 
+    // Finalize list
     data = combineIntoIdList(idList, passiveList, skillList);
+
     let originalDataSize = JSON.stringify(data).length;
     console.log("Dataset Size: %d", originalDataSize);
 
@@ -41,7 +44,7 @@ try {
 
     // Create/overwrite file and write DATA object
     fs.writeFileSync(
-        'data.js',
+        'generated/data.js',
         `const DATA = ${JSON.stringify(data, null, DEBUG ? 2 : 0)};` +
         `module.exports = { DATA };`,
         { encoding: 'utf-8', flag: 'w' }
@@ -182,6 +185,23 @@ function getPassiveDataList() {
 }
 
 
+function getPassiveDataList2() {
+    // passive.json
+    // passive_check4.json (Uptie 4)
+    // Data Structure: { "list": [...] }
+    try {
+        let list = [];
+        const obj = JSON.parse(fs.readFileSync(`${folder}/passive.json`));
+        const obj2 = JSON.parse(fs.readFileSync(`${folder}/passive_check4.json`));
+        list = list.concat(obj['list']).concat(obj2['list']);
+        return list;
+    } catch (err) {
+        console.log(err);
+    }
+    return [];
+}
+
+
 function getSkillDataList() {
     // personality-skill-YY.json
     // Data Structure: { "list": [...] }
@@ -200,28 +220,13 @@ function getSkillDataList() {
 }
 
 
-function getPassiveTextList(lang) {
-    // XX_Passives.json
-    // Data Structure: { "dataList": [...] }
-    try {
-        const obj = JSON.parse(
-            fs.readFileSync(`${folder}/${lang}_Passives.json`)
-        );
-        return [].concat(obj['dataList']);
-    } catch (err) {
-        console.log(err);
-    }
-    return [];
-}
-
-
 function getIdTextList(lang) {
     // XX_Personalities.json
     // Data Structure: { "dataList": [...] }
     try {
-        const obj = JSON.parse(
-            fs.readFileSync(`${folder}/${lang}_Personalities.json`)
-        );
+        let text = fs.readFileSync(`${folder}/${lang}_Personalities.json`, { encoding: 'utf-8' });
+        text = text.replaceAll('\\n', ' ');
+        const obj = JSON.parse(text);
         return [].concat(obj['dataList']);
     } catch (err) {
         console.log(err);
@@ -234,9 +239,12 @@ function getPassiveTextList(lang) {
     // XX_Passives.json
     // Data Structure: { "dataList": [...] }
     try {
-        const obj = JSON.parse(
-            fs.readFileSync(`${folder}/${lang}_Passives.json`)
-        );
+        let text = fs.readFileSync(`${folder}/${lang}_Passives.json`, { encoding: 'utf-8' });
+        const skillTags = getSkillTagList(lang);
+        for (tag of skillTags) {
+            text = text.replaceAll('[' + tag['id'] + ']', '[' + tag['name'] + ']');
+        }
+        const obj = JSON.parse(text);
         return [].concat(obj['dataList']);
     } catch (err) {
         console.log(err);
@@ -248,7 +256,6 @@ function getPassiveTextList(lang) {
 function getSkillTextList(lang) {
     // XX_Skills.json
     // XX_Skills_personality-YY.json
-    // XX_SkillTag.json
     // Data Structure: { "dataList": [...] }
     const files = sinners.map((v) => `${folder}/${lang}_Skills_personality-${v}.json`);
     try {
@@ -260,6 +267,33 @@ function getSkillTextList(lang) {
             obj = JSON.parse(fs.readFileSync(f));
             list = list.concat(obj['dataList']);
         }
+        return list;
+    } catch (err) {
+        console.log(err);
+    }
+    return [];
+}
+
+
+function getSkillTagList(lang) {
+    // XX_SkillTag.json
+    // XX_BattleKeywords.json
+    // XX_BattleKeywords-walpu4.json
+    // Data Structure: { "dataList": [...] }
+    try {
+        let list = [];
+        let obj = JSON.parse(
+            fs.readFileSync(`${folder}/${lang}_SkillTag.json`)
+        );
+        list = list.concat(obj['dataList']);
+        obj = JSON.parse(
+            fs.readFileSync(`${folder}/${lang}_BattleKeywords.json`)
+        );
+        list = list.concat(obj['dataList']);
+        obj = JSON.parse(
+            fs.readFileSync(`${folder}/${lang}_BattleKeywords-walpu4.json`)
+        );
+        list = list.concat(obj['dataList']);
         return list;
     } catch (err) {
         console.log(err);
@@ -327,16 +361,20 @@ function combineSkillLists(data, text) {
 }
 
 
-function combinePassiveLists(data, text) {
+function combinePassiveLists(data1, data2, text) {
     let returnList = [];
-    for (i of data) {
+    for (i of data1) {
         let newObj = { ...i };
         for (bp of newObj['battlePassiveList']) {
             bp['passiveList'] = [];
             for (p of bp['passiveIDList']) {
                 for (j of text) {
                     if (j['id'] === p) {
-                        bp['passiveList'].push({ ...j });
+                        for (k of data2) {
+                            if (k['id'] === p) {
+                                bp['passiveList'].push({ ...j, ...k });
+                            }
+                        }
                     }
                 }
             }
@@ -346,7 +384,11 @@ function combinePassiveLists(data, text) {
             for (p of bp['passiveIDList']) {
                 for (j of text) {
                     if (j['id'] === p) {
-                        bp['passiveList'].push({ ...j });
+                        for (k of data2) {
+                            if (k['id'] === p) {
+                                bp['passiveList'].push({ ...j, ...k });
+                            }
+                        }
                     }
                 }
             }
