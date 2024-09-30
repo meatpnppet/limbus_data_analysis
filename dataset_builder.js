@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 
-const folder = 'JSON';
+const folder = 'json';
 const languages = ['EN', 'JP', 'KR'];
 const sinners = [
     '01', '02', '03', '04', '05', '06',
