@@ -113,6 +113,7 @@ function cleanSkillData(obj) {
         'skillTargetType'
     ];
     delete obj['id'];
+    delete obj['skillId'];
     delete obj['skillType'];
     for (let skill of obj['skillData']) {
         for (let key of skillDataToDelete) {
