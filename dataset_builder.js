@@ -28,18 +28,22 @@ try {
     data = combineIntoIdList(idList, passiveList, skillList);
     let originalDataSize = JSON.stringify(data).length;
     console.log("Dataset Size: %d", originalDataSize);
-    data = cleanData(data);
-    let cleanedDataSize = JSON.stringify(data).length;
-    console.log(
-        "Cleaned Size: %d (%f%)",
-        cleanedDataSize,
-        ((cleanedDataSize / originalDataSize) * 100).toFixed(2)
-    );
+
+    if (!DEBUG) {
+        data = cleanData(data);
+        let cleanedDataSize = JSON.stringify(data).length;
+        console.log(
+            "Cleaned Size: %d (%f%)",
+            cleanedDataSize,
+            ((cleanedDataSize / originalDataSize) * 100).toFixed(2)
+        );
+    }
 
     // Create/overwrite file and write DATA object
     fs.writeFileSync(
         'data.js',
-        `const DATA = ${JSON.stringify(data, null, DEBUG ? 2 : 0)}`,
+        `const DATA = ${JSON.stringify(data, null, DEBUG ? 2 : 0)};` +
+        `module.exports = { DATA };`,
         { encoding: 'utf-8', flag: 'w' }
     );
 } catch (err) {
@@ -85,7 +89,6 @@ function cleanIdData(obj) {
 function cleanIdText(obj) {
     const toDelete = [
         'id',
-        'name',
         'nameWithTitle',
         'desc'
     ];
@@ -94,6 +97,7 @@ function cleanIdText(obj) {
         for (let key of toDelete) {
             delete obj[lang][key];
         }
+        obj[lang]['title'] = obj[lang]['title'].replace('\n', ' ');
     }
 }
 
