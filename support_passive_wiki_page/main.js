@@ -1,5 +1,5 @@
 const { DATA } = require('../generated/data.js');
-const { KEYWORDS } = require('../generated/keywords.js');
+const helper = require('./helper.js');
 const fs = require('node:fs');
 
 const sinner = ['Yi Sang', 'Faust', 'Don Quixote', 'Ryōshū', 'Meursault', 'Hong Lu', 'Heathcliff', 'Ishmael', 'Rodion', 'Sinclair', 'Outis', 'Gregor'];
@@ -68,34 +68,9 @@ for (let s of sinner) {
         }
 
         title = title.replaceAll('\n', ' ');
-        uptie3 = uptie3.replaceAll('\n', '. ');
-        uptie3 = uptie3.replaceAll(/<[^>]+>/g, '');
-        // Change bullet points into sentence breaks
-        uptie3 = uptie3.replaceAll(' - ', '. ');
-        // Fix weird periods
-        uptie3 = uptie3.replaceAll('..', '.');
-        uptie3 = uptie3.replaceAll(' .', '.');
-        // Format status effects
-        for (let keyword of KEYWORDS['EN']) {
-            uptie3 = uptie3.replaceAll(`[${keyword['id']}]`, `[${keyword['name']}]`);
-        }
-        uptie3 = uptie3.replaceAll(/\[(Offense Level Down) \]/g, '{{StatusEffect|$1|b}}');
-        uptie3 = uptie3.replaceAll(/\[([^\]]+)\]/g, '{{StatusEffect|$1|b}}');
-
+        uptie3 = helper.cleanUptieDesc(uptie3);
         if (uptie4) {
-            uptie4 = uptie4.replaceAll('\n', '. ');
-            uptie4 = uptie4.replaceAll(/<[^>]+>/g, '');
-            // Change bullet points into sentence breaks
-            uptie4 = uptie4.replaceAll(' - ', '. ');
-            // Fix weird periods
-            uptie4 = uptie4.replaceAll('..', '.');
-            uptie4 = uptie4.replaceAll(' .', '.');
-            // Format status effects
-            for (let keyword of KEYWORDS['EN']) {
-                uptie4 = uptie4.replaceAll(`[${keyword['id']}]`, `[${keyword['name']}]`);
-            }
-            uptie4 = uptie4.replaceAll(/\[(Offense Level Down) \]/g, '{{StatusEffect|$1|b}}');
-            uptie4 = uptie4.replaceAll(/\[([^\]]+)\]/g, '{{StatusEffect|$1|b}}');
+            uptie4 = helper.cleanUptieDesc(uptie4);
         }
 
         // Fix Walpurgis 4 EGO ID names
