@@ -8,25 +8,21 @@ const languages = ['EN', 'JP', 'KR'];
 let options = {
     debug: false,
     writeToFile: true,
-    clean: false,
-    format: true,
+    clean: true,
     filename: 'generated/data.js',
     folder: 'json'
 };
 
 function main() {
-    if (process.argv.length < 4) {
+    if (process.argv.length > 2 && process.argv[2] === 'help') {
         console.log('Usage:\n'
-            + '    node .\\dataset_builder\\main.js [JSON folder] [output file] [options...]\n'
+            + '    node .\\dataset_builder\\main.js [options...]\n'
             + 'Options:\n'
+            + '    --output=[filename]: Change output file (default: generated/data.js)\n'
+            + '    --input=[folder]: Change JSON input folder (default: json)\n'
             + '    -w: Output JSON file with whitespace\n'
-            + '    -r: Run without writing to file\n'
-            + '    -c: Clean extra properties in output');
-        return;
-    }
-
-    if (!fs.existsSync(process.argv[2])) {
-        console.error('No JSON directory (run without args for usage)');
+            + '    -d: Dry run, or run without writing to file\n'
+            + '    --clean=[true/false]: Clean extra properties in output (default: true)');
         return;
     }
 
@@ -34,19 +30,30 @@ function main() {
         if (arg === '-w') {
             options.debug = true;
             console.log('-w: Output with whitespace');
-        } else if (arg === '-r') {
+        } else if (arg === '-d') {
             options.writeToFile = false;
-            console.log('-r: Run without writing to file');
-        } else if (arg === '-c') {
-            options.clean = true;
-            console.log('-c: Clean extra properties in output');
+            console.log('-d: Dry run, or run without writing to file');
+        } else if (arg.startsWith('--clean=')) {
+            let substring = arg.substring('--clean='.length);
+            if (substring === 'true') {
+                options.clean = true;
+            } else if (substring === 'false') {
+                options.clean = false;
+                console.log('--clean=false: Do not clean extra properties in output');
+            } else {
+                console.log('Invalid boolean value');
+                return;
+            }
+        } else if (arg.startsWith('--output=')) {
+            options.filename = arg.substring('--output='.length);
+        } else if (arg.startsWith('--input=')) {
+            options.folder = arg.substring('--input='.length);
         }
     }
 
     if (options.writeToFile) {
         try {
-            fs.writeFileSync(process.argv[3], '');
-            options.filename = process.argv[3];
+            fs.writeFileSync(options.filename, '');
         } catch (err) {
             console.error(err);
             return;
@@ -72,7 +79,7 @@ function main() {
         let jsonText = JSON.stringify(idDataList, null, options.debug ? 2 : 0);
         console.log("Dataset Size: %d characters", jsonText.length);
 
-        if (!options.clean) {
+        if (options.clean) {
             let originalDataSize = jsonText.length;
             idDataList = cleaner.cleanData(idDataList);
             jsonText = JSON.stringify(idDataList, null, options.debug ? 2 : 0);
