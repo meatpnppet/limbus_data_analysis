@@ -1,0 +1,436 @@
+{{TabbedHeader
+|subpages = 1
+|tab1 = Support Passives by Sinner
+|tab2 = Support Passives by Effect}}
+== Yi Sang ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Yi Sang]] || {{SkillGrad|def|Information Neutralization}}
+| {{Icons|Gloom}} x 4 Owned || At the end of the turn, Heal 10 SP for 1 ally with the least SP if they lost SP. 
+|-
+| [[Seven Assoc. South Section 6 Yi Sang]] || {{SkillGrad|def|Observational Eye}}
+| {{Icons|Gluttony}} x 3 Res || 1 ally with the highest Max HP gains +1 clash Power in a clash. 
+|-
+| [[Blade Lineage Salsu Yi Sang]] || {{SkillGrad|def|Bestow}}
+| {{Icons|Pride}} x 3 Owned || 1 ally with the most SP gains +1 Poise Count from skills. 
+|-
+| [[Effloresced E.G.O::Spicebush Yi Sang]] || {{SkillGrad|def|Pungent Spring Breeze}}
+| {{Icons|Sloth}} x 3 Res || 1 ally with the least SP deals +10% damage when attacking 2 or more targets at once. 
+|-
+| [[Molar Office Fixer Yi Sang]] || {{SkillGrad|def|Cleaning Up the Mess}}
+| {{Icons|Sloth}} x 3 Owned || When 1 ally with the lowest Max HP triggers Tremor Burst on an enemy, inflict 1 Defense Level Down per 4 Stagger Threshold raised (Max 3 per 1 enemy every turn) 
+|-
+| [[W Corp. L3 Cleanup Agent Yi Sang]] || {{SkillGrad|def|Cleanup Demonstration}}
+| {{Icons|Gluttony}} x 4 Owned || 1 Ally with the highest Charge Count deals more damage against targets with Rupture based on Rupture on target (+1.5% per Rupture. Max +15% damage) 
+|-
+| [[The Pequod First Mate Yi Sang]] || {{SkillGrad|def|The First Mate's Acumen}}
+| {{Icons|Pride}} x 4 Owned || On Crit, 1 ally with the most {{StatusEffect|Poise|b}} inflicts 2 additional Bleed Potency with a Skill (6 times per turn) 
+|-
+| [[Dieci Assoc. South Section 4 Yi Sang]] || {{SkillGrad|def|Reviewed Knowledge}}
+| {{Icons|Sloth}} x 4 Owned || '''Uptie III''': When 1 ally with the highest Speed Discards a Skill, gain (3 x Discarded Skill rank)% of the Max HP as Shield (Once per turn) <br/> '''Uptie IV''': When 1 ally with the highest Speed Discards a Skill, gain (5 x Discarded Skill rank)% of the Max HP as Shield (2 times per turn)
+|-
+| [[The Ring Pointillist Student Yi Sang]] || {{SkillGrad|def|Practices on Aesthetics}}
+| {{Icons|Lust}} x 4 Owned || '''Uptie III''': 1 ally with the least SP heals 2 SP On Hit for every type of negative effect on the target. (max 6). (This Passive activates 2 times max per turn) <br/> '''Uptie IV''': 1 ally with the least SP heals 2 SP On Hit for every type of negative effect on the target. (max 6). If the target has {{StatusEffect|Bleed|b}}, heal 3 additional SP. (This Passive activates 2 times max per turn)
+|-
+| [[Lobotomy E.G.O::Solemn Lament Yi Sang]] || {{SkillGrad|def|Hand of Salvation}}
+| {{Icons|Gloom}} x 6 Owned || When an ally hits with a Skill, consume 2 {{StatusEffect|Sinking|b}} on the target to inflict them with 1 {{StatusEffect|Butterfly|b}} (3 times per turn) 
+|}
+== Faust ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Faust]] || {{SkillGrad|def|Keen Observation}}
+| {{Icons|Pride}} x 3 Owned || 1 ally with the highest Max HP inflicts 2 Offense Level Down with attacks at a 25% chance. 
+|-
+| [[W Corp. L2 Cleanup Agent Faust]] || {{SkillGrad|def|Radio Comms}}
+| {{Icons|Envy}} x 3 Owned || 1 ally with the lowest Max HP gains +1 Charge Count. 
+|-
+| [[Lobotomy Corp. Remnant Faust]] || {{SkillGrad|def|Backing}}
+| {{Icons|Lust}} x 2 Res || 1 ally with the lowest Max HP gains +2 defense skill final Power. 
+|-
+| [[The One Who Grips Faust]] || {{SkillGrad|def|Whispers}}
+| {{Icons|Lust}} x 3 Res || '''Uptie III''': At the start of the combat phase, heal 1 ally with the least SP for 15 SP. If the ally is an 'N Corp. Fanatic', also apply 1 Fanatic. <br/> '''Uptie IV''': At the start of the combat phase, heal 1 ally with the least SP for 15 SP. If the ally is an 'N Corp. Fanatic', also apply 2 Fanatic.
+|-
+| [[Zwei Assoc. South Section 4 Faust]] || {{SkillGrad|def|Protection Request Received}}
+| {{Icons|Gloom}} x 2 Res || At the start of the combat phase, apply 2 Defense Level Up to the ally with the lowest HP percentage. If target's HP is below 50%, apply an additional 2 Defense Level Up 
+|-
+| [[Seven Assoc. South Section 4 Faust]] || {{SkillGrad|def|Seven Association Tea Time}}
+| {{Icons|Gluttony}} x 4 Owned || '''Uptie III''': 1 ally with the fastest Speed deals more damage based on the target's Rupture when attacking with a damage type that the target is "Fatal"(Resistance>x1.5) to. +1.5% per 1 Rupture (Max 15%) <br/> '''Uptie IV''': 1 ally with the fastest Speed deals more damage based on the target's Rupture when attacking with a damage type that the target is "Weak" or "Fatal"(Resistance>x1) to. (+1.5% per 1 Rupture; Max 15%). If the ally is a Seven Association Fixer, deal further increased damage. (+0.5% per 1 Rupture; Max 5%)
+|-
+| [[Lobotomy E.G.O::Regret Faust]] || {{SkillGrad|def|Repression Work}}
+| {{Icons|Wrath}} x 5 Owned || In a clash, the target of the slowest ally has -1 Clash Power if they have 3+ types of negative effects 
+|-
+| [[Blade Lineage Salsu Faust]] || {{SkillGrad|def|Lingering Bladepoint}}
+| {{Icons|Pride}} x 4 Owned || When the ally first deployed in the pre-battle team setup Critically hits with a Slash type Skill, inflict 1 Defense Level Down (3 times max per 1 enemy per turn) 
+|-
+| [[Wuthering Heights Butler Faust]] || {{SkillGrad|def|Anticipatory Training}}
+| {{Icons|Gloom}} x 4 Owned || '''Uptie III''': When 1 ally with the least SP hits an enemy with 5+ {{StatusEffect|Sinking|b}}, the ally heals 2 SP On Hit (4 times per turn) <br/> '''Uptie IV''': When 1 ally with the least SP hits an enemy with 5+ {{StatusEffect|Sinking|b}}, the ally heals 3 SP On Hit (4 times per turn)
+|-
+| [[MultiCrack Office Rep Faust]] || {{SkillGrad|def|Auxiliary Dismantling Current}}
+| {{Icons|Envy}} x 5 Owned || '''Uptie III''': When 1 ally with the least {{StatusEffect|Charge|b}} Count kills an enemy, the ally gains +2 {{StatusEffect|Charge|b}} Count (once per turn, prioritizes allies that consume or gain {{StatusEffect|Charge|b}}) <br/> '''Uptie IV''': When 1 ally with the least {{StatusEffect|Charge|b}} Count kills an enemy, the ally gains +3 {{StatusEffect|Charge|b}} Count (once per turn, prioritizes allies that consume or gain {{StatusEffect|Charge|b}})
+|}
+== Don Quixote ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Don Quixote]] || {{SkillGrad|def|Support}}
+| {{Icons|Lust}} x 5 Owned || 1 ally with the most SP deals +10% Pierce damage. 
+|-
+| [[W Corp. L3 Cleanup Agent Don Quixote]] || {{SkillGrad|def|Broken Spirit}}
+| {{Icons|Gloom}} x 3 Res || 1 ally with the highest Speed gains +1 final Power for their first skill. 
+|-
+| [[Shi Assoc. South Section 5 Director Don Quixote]] || {{SkillGrad|def|Divide in Two}}
+| {{Icons|Wrath}} x 5 Owned || 1 ally with the highest Speed deals +10% Slash damage. 
+|-
+| [[N Corp. Mittelhammer Don Quixote]] || {{SkillGrad|def|Hammer of Zealotry}}
+| {{Icons|Lust}} x 4 Owned || 1 Fanatic ally with the least SP deals +10% damage. 
+|-
+| [[Cinq Assoc. South Section 5 Director Don Quixote]] || {{SkillGrad|def|Dueling Request}}
+| {{Icons|Pride}} x 3 Res || If Speed of all allies is higher than Speed of all enemies, the fastest ally deals more damage based on the Speed difference between it and the slowest enemy. (+3% per 1 point of difference, Max 15%) 
+|-
+| [[The Middle Little Sister Don Quixote]] || {{SkillGrad|def|Favoritism}}
+| {{Icons|Envy}} x 3 Owned || 1 ally with the lowest Max HP gains 1 Blunt DMG Up next turn every time the enemies strike an ally(not including this unit) 6 times. (Max 2) 
+|-
+| [[Lobotomy E.G.O::Lantern Don Quixote]] || {{SkillGrad|def|Illumilantern}}
+| {{Icons|Gluttony}} x 5 Owned || '''Uptie III''': The ally with the highest {{StatusEffect|Aggro|b}} Skill Slot heals 2 HP every time they hit an enemy that targets this unit (Does not apply to units without {{StatusEffect|Aggro|b}}) <br/> '''Uptie IV''': The ally with the highest {{StatusEffect|Aggro|b}} Skill Slot heals 4 HP every time they hit an enemy that targets this unit (Does not apply to units without {{StatusEffect|Aggro|b}})
+|-
+| [[Blade Lineage Salsu Don Quixote]] || {{SkillGrad|def|Nightly Stroll}}
+| {{Icons|Pride}} x 3 Owned || '''Uptie III''': 1 ally with the least {{StatusEffect|Poise|b}} gains 1 more {{StatusEffect|Poise|b}} Potency when gaining {{StatusEffect|Poise|b}} Potency with its own Skill or Coin effects. (2 times max. Does not apply to allies without {{StatusEffect|Poise|b}}) <br/> '''Uptie IV''': 1 ally with the least {{StatusEffect|Poise|b}} gains 2 more {{StatusEffect|Poise|b}} Potency when gaining {{StatusEffect|Poise|b}} Potency with its own Skill or Coin effects. (2 times max. Does not apply to allies without {{StatusEffect|Poise|b}})
+|-
+| [[T Corp. Class 3 Collection Staff Don Quixote]] || {{SkillGrad|def|T Corp. Physics Distortion Field}}
+| {{Icons|Sloth}} x 3 Owned || When 1 ally with the slowest Speed takes damage from enemies with {{StatusEffect|Tremor|b}}, take -10% less damage 
+|}
+== Ryōshū ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Ryōshū]] || {{SkillGrad|def|Hustle}}
+| {{Icons|Gluttony}} x 3 Res || 1 ally with the lowest Max HP deals and takes +20% damage. 
+|-
+| [[Seven Assoc. South Section 6 Ryōshū]] || {{SkillGrad|def|Ice Breaker}}
+| {{Icons|Gluttony}} x 4 Owned || 1 ally with the lowest Max HP inflicts +1 Rupture. 
+|-
+| [[Kurokumo Clan Wakashu Ryōshū]] || {{SkillGrad|def|Muscle in Charge}}
+| {{Icons|Lust}} x 4 Owned || 1 ally with the highest Speed inflicts +1 Bleed. 
+|-
+| [[R.B. Chef de Cuisine Ryōshū]] || {{SkillGrad|def|Artistic Flavor}}
+| {{Icons|Lust}} x 5 Owned || When an enemy is defeated, the ally with the least HP heals 15 HP. (Once per turn.) 
+|-
+| [[W Corp. L3 Cleanup Agent Ryōshū]] || {{SkillGrad|def|Dimensional Refraction Edge - Type: Blade Mk7}}
+| {{Icons|Pride}} x 5 Owned || '''Uptie III''': When an ally with the lowest Max HP defeats an enemy, they gain +2 Charge Count (Once per turn) <br/> '''Uptie IV''': When an ally with the lowest Max HP defeats an enemy, they gain +3 Charge Count (Once per turn)
+|-
+| [[LCCB Assistant Manager Ryōshū]] || {{SkillGrad|def|The Lucky Cig}}
+| {{Icons|Pride}} x 4 Owned || '''Uptie III''': If 1 ally with the least Ammo uses up their last Ammo with a Coin, deal 50% of the damage dealt by that Coin attack against each target as bonus damage against each individual target. (rounded up) <br/> '''Uptie IV''': If 1 ally with the least {{StatusEffect|Ammo|b}} uses a Skill that spends {{StatusEffect|Ammo|b}}, gain 3 Poise. (once per turn; does not apply to allies without Ammo). If 1 ally with the least Ammo uses up their last Ammo with a Coin, deal 50% of the damage dealt by that Coin attack against each target as bonus damage against each individual target. (rounded up)
+|-
+| [[Liu Assoc. South Section 4 Ryōshū]] || {{SkillGrad|def|Spread Flame}}
+| {{Icons|Wrath}} x 4 Owned || '''Uptie III''': When 1 ally with the lowest Speed defeats an enemy with {{StatusEffect|Burn|b}}, inflict 3 {{StatusEffect|Burn|b}} on 1 random enemy (Once per turn). In Focused Encounters, on 1 random Part <br/> '''Uptie IV''': When 1 ally with the lowest Speed defeats an enemy with {{StatusEffect|Burn|b}}, inflict 3 {{StatusEffect|Burn|b}} on 2 random enemies (Once per turn). In Focused Encounters, on 2 random Parts
+|-
+| [[Edgar Family Chief Butler Ryōshū]] || {{SkillGrad|def|Cleaning Command}}
+| {{Icons|Pride}} x 4 Owned || '''Uptie III''': When the ally that was deployed last wins a Clash, gain +1 {{StatusEffect|Poise|b}} Count (3 times per turn) <br/> '''Uptie IV''': When the ally that was deployed last wins a Clash, gain +1 {{StatusEffect|Poise|b}} Count (3 times per turn), and gain 1 {{StatusEffect|Haste|b}} next turn (once per turn)
+|-
+| [[District 20 Yurodivy Ryōshū]] || {{SkillGrad|def|The A.I.}}
+| {{Icons|Sloth}} x 4 Owned || #1 Deployed ally gains +1 more Tremor Count from their Skill or Coin effects (2 times per turn) 
+|-
+| [[Lobotomy E.G.O::Red Eyes & Penitence Ryōshū]] || {{SkillGrad|def|Eat and Sleep}}
+| {{Icons|Envy}} x 3 Res || Combat Start:. 1 ally with the lowest HP percentage heals 3 HP. 1 ally with the least SP heals 3 SP 
+|}
+== Meursault ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Meursault]] || {{SkillGrad|def|Backup}}
+| {{Icons|Sloth}} x 3 Owned || 1 ally with the highest Max HP takes -10% damage from attack skills. 
+|-
+| [[Liu Assoc. South Section 6 Meursault]] || {{SkillGrad|def|Friction Point}}
+| {{Icons|Lust}} x 4 Owned || 1 ally with the lowest Speed inflicts +1 Burn. 
+|-
+| [[W Corp. L2 Cleanup Agent Meursault]] || {{SkillGrad|def|Taciturn}}
+| {{Icons|Envy}} x 4 Owned || 1 ally with the lowest Speed inflicts +1 Rupture. 
+|-
+| [[N Corp. Großhammer Meursault]] || {{SkillGrad|def|Highest Honor}}
+| {{Icons|Wrath}} x 3 Res || Apply 1 Attack Power Up and 1 Protection to the ally with the least HP below 50%. If the ally is an 'N Corp. Fanatic', also apply 1 Fanatic. 
+|-
+| [[Rosespanner Workshop Fixer Meursault]] || {{SkillGrad|def|Leave by Suggestion}}
+| {{Icons|Gloom}} x 3 Res || 1 ally with the highest Speed lowers the Clash Power of opponents with Tremor by 1. 
+|-
+| [[R Corp. 4th Pack Rhino Meursault]] || {{SkillGrad|def|Maneuver Training}}
+| {{Icons|Envy}} x 5 Owned || At the end of the turn, 1 ally with the highest Charge Count gains Max Speed +1 (Capped at 3) per 5 Charge Count next turn. 
+|-
+| [[The Middle Little Brother Meursault]] || {{SkillGrad|def|One Family}}
+| {{Icons|Envy}} x 3 Owned || The 1 ally with the least SP heals 10 SP at Turn End if there is another ally from the same Faction 
+|-
+| [[Blade Lineage Mentor Meursault]] || {{SkillGrad|def|Swordplay of the Homeland}}
+| {{Icons|Pride}} x 5 Owned || Combat Start: 1 ally with the most {{StatusEffect|Poise|b}} deals +15% damage on Critical Hit 
+|-
+| [[Dead Rabbits Boss Meursault]] || {{SkillGrad|def|My Responsibility}}
+| {{Icons|Gluttony}} x 3 Res || '''Uptie III''': When 1 ally with the fastest Speed hits an enemy with 6+ {{StatusEffect|Rupture|b}}, inflict 1 {{StatusEffect|Offense Level Down|b}} (3 times per enemy per turn) <br/> '''Uptie IV''': When 1 ally with the fastest Speed hits an enemy with 3+ {{StatusEffect|Rupture|b}}, inflict 1 {{StatusEffect|Offense Level Down|b}} (3 times per enemy per turn)
+|-
+| [[Dieci Assoc. South Section 4 Director Meursault]] || {{SkillGrad|def|Diligent Learning}}
+| {{Icons|Gloom}} x 5 Owned || When 1 ally with the highest max HP Discards a Skill, gain (5 x Discarded Skill rank)% of the max HP as Shield (once per turn). If the unit has {{StatusEffect|Insight|b}}, multiply the above Shield value by 1.5 
+|}
+== Hong Lu ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Hong Lu]] || {{SkillGrad|def|Frivolous Jokes}}
+| {{Icons|Sloth}} x 5 Owned || At the start of the combat phase, the ally with the least SP heals 6 SP. 
+|-
+| [[Kurokumo Clan Wakashu Hong Lu]] || {{SkillGrad|def|Syndicate Payback}}
+| {{Icons|Lust}} x 4 Owned || 1 ally with the highest Speed inflicts +1 Bleed. 
+|-
+| [[Tingtang Gang Gangleader Hong Lu]] || {{SkillGrad|def|Gambit}}
+| {{Icons|Gluttony}} x 5 Owned || 1 ally with the most SP deals +20% damage with Heads Coins. 
+|-
+| [[Liu Assoc. South Section 5 Hong Lu]] || {{SkillGrad|def|Isn’t It Warm?}}
+| {{Icons|Wrath}} x 4 Owned || 1 ally with the most SP inflicts +1 Burn Count with the effects of their attack skills/coins. 
+|-
+| [[K Corp. Class 3 Excision Staff Hong Lu]] || {{SkillGrad|def|High-grade Ampule}}
+| {{Icons|Gluttony}} x 4 Res || At the start of the combat phase, give 2 K Corp Ampule to 1 ally with the lowest HP percentage. 
+|-
+| [[W Corp. L2 Cleanup Agent Hong Lu]] || {{SkillGrad|def|Train Cleanup Manual}}
+| {{Icons|Pride}} x 3 Owned || An ally with the lowest Speed gains 2 Haste next turn if at 5+ Charge Count at the start of the combat phase 
+|-
+| [[Hook Office Fixer Hong Lu]] || {{SkillGrad|def|Mass-produced Bionic Gear}}
+| {{Icons|Lust}} x 5 Owned || When 1 ally with the fastest Speed defeats an enemy inflicted with Bleed, gain 1 Attack Power Up next turn (Once per turn) 
+|-
+| [[Dieci Assoc. South Section 4 Hong Lu]] || {{SkillGrad|def|Enlightenment}}
+| {{Icons|Gloom}} x 4 Owned || After Attack: If the target is in a staggered or defeated state by an attack from 1 ally with the least SP, the ally heals 7 SP. 
+|-
+| [[District 20 Yurodivy Hong Lu]] || {{SkillGrad|def|In the Culprit's Shoes}}
+| {{Icons|Sloth}} x 3 Res || When #1 Deployed Identity triggers Tremor Burst with Skill or Coin effects, 25% chance to trigger an additional Tremor Burst (once per turn) 
+|}
+== Heathcliff ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Heathcliff]] || {{SkillGrad|def|Spite-driven}}
+| {{Icons|Envy}} x 5 Owned || 1 ally with the lowest Max HP deals +10% Blunt damage. 
+|-
+| [[Shi Assoc. South Section 5 Heathcliff]] || {{SkillGrad|def|Self-neglect}}
+| {{Icons|Wrath}} x 3 Res || 1 ally with the least HP deals and takes +20% damage. 
+|-
+| [[R Corp. 4th Pack Rabbit Heathcliff]] || {{SkillGrad|def|Doggedness}}
+| {{Icons|Wrath}} x 5 Owned || 1 ally with the highest Speed deals +10% Pierce damage. 
+|-
+| [[N Corp. Kleinhammer Heathcliff]] || {{SkillGrad|def|Cantillation}}
+| {{Icons|Lust}} x 4 Owned || 1 ally with the highest Speed inflicts +1 Nails. 
+|-
+| [[Lobotomy E.G.O::Sunshower Heathcliff]] || {{SkillGrad|def|Ragged Umbrella}}
+| {{Icons|Envy}} x 3 Owned || 1 ally with the least SP loses 10 SP when hit by an attack and gains 1 Blunt DMG Up next turn. (Once per turn) 
+|-
+| [[Seven Assoc. South Section 4 Heathcliff]] || {{SkillGrad|def|Connect The Dots}}
+| {{Icons|Gluttony}} x 4 Owned || '''Uptie III''': 1 ally with the highest Max HP inflicts +1 more Rupture with Skill effects when attacking a target with a damage type that the target is "Fatal"(Resistance>x1.5) to <br/> '''Uptie IV''': 1 ally with the highest Max HP inflicts +1 more Rupture with Skill effects when attacking a target with a damage type that the target is "Fatal"(Resistance>x1.5) to. If the ally is a Seven Association Fixer, additional +1 more Rupture
+|-
+| [[The Pequod Harpooneer Heathcliff]] || {{SkillGrad|def|Desperation}}
+| {{Icons|Envy}} x 5 Owned || '''Uptie III''': 1 ally with the highest max HP deals more Pierce Damage at less HP. Deal 0.15% more damage for every 1% missing HP (Max 15%) <br/> '''Uptie IV''': 1 ally with the highest max HP deals more Pierce Damage at less HP. Deal 0.3% more damage for every 1% missing HP (Max 30%)
+|-
+| [[Öufi Assoc. South Section 3 Heathcliff]] || {{SkillGrad|def|Verify Obligation Fulfillment}}
+| {{Icons|Pride}} x 6 Owned || To 1 ally with the fastest Speed: Clash Power +1 to Skills that apply {{StatusEffect|Tremor|b}} Potency or Count 
+|-
+| [[MultiCrack Office Fixer Heathcliff]] || {{SkillGrad|def|Charging Module Installation}}
+| {{Icons|Envy}} x 7 Owned || #1 Deployed ally: Max {{StatusEffect|Charge|b}} Count +5. (When conditions are met, this effect will remain activated until the start of the next turn) 
+|-
+| [[Wild Hunt Heathcliff]] || {{SkillGrad|def|Endless Lamentation}}
+| {{Icons|Gloom}} x 3 Res || 1 ally with the highest SP deals +5% more damage to targets with less than 0 SP. If the target has less than 0 SP: deal even more damage the further the target's SP is from 0 (+0.5% more damage per SP, max 20%). If the target does not have SP, the said ally inflicts +1 more {{StatusEffect|Sinking|b}} Potency and Count with their Skill and Coin Effects of their Attack Skills (2 times per turn) 
+|}
+== Ishmael ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Ishmael]] || {{SkillGrad|def|Determination to Survive}}
+| {{Icons|Wrath}} x 6 Owned || 1 ally with the least HP and less than 50% of Max HP gains +1 Clash Power in a clash. 
+|-
+| [[R Corp. 4th Pack Reindeer Ishmael]] || {{SkillGrad|def|Tenacity}}
+| {{Icons|Gloom}} x 5 Owned || 1 ally with the least SP deals +10% Blunt damage. 
+|-
+| [[Shi Assoc. South Section 5 Ishmael]] || {{SkillGrad|def|Strife}}
+| {{Icons|Envy}} x 2 Res || 1 ally with the least HP gains +2 counter skill final Power. 
+|-
+| [[LCCB Assistant Manager Ishmael]] || {{SkillGrad|def|By the Manual}}
+| {{Icons|Gluttony}} x 2 Res || 1 ally with the lowest Speed gains +2 guard skill final Power. 
+|-
+| [[Lobotomy E.G.O::Sloshing Ishmael]] || {{SkillGrad|def|Corrosive Slime}}
+| {{Icons|Gloom}} x 4 Owned || When 1 ally with the highest Speed triggers Tremor Burst, they inflict 2 Rupture. 
+|-
+| [[Liu Assoc. South Section 4 Ishmael]] || {{SkillGrad|def|Intense Blaze}}
+| {{Icons|Wrath}} x 6 Owned || 1 ally with the lowest Speed deals +5% Blunt damage for every 3 Burn Count on target. (Max 15%) 
+|-
+| [[Molar Boatworks Fixer Ishmael]] || {{SkillGrad|def|Crab Driver}}
+| {{Icons|Pride}} x 4 Owned || When an ally with the lowest Max HP hits with Heads Coins, they inflict +1 Sinking Count when inflicting Tremor Count on their target with Coin effects. 
+|-
+| [[The Pequod Captain Ishmael]] || {{SkillGrad|def|Captain's Orders}}
+| {{Icons|Pride}} x 3 Res || '''Uptie III''': 1 ally with the highest SP gains 2 Poise when the target is defeated after that unit's attack (2 times per turn) <br/> '''Uptie IV''': After Attack: 1 ally with the highest SP gains 2 Poise and +2 Poise Count when the target is defeated after that unit's attack (2 times per turn)
+|-
+| [[Edgar Family Butler Ishmael]] || {{SkillGrad|def|Loyal Supporter}}
+| {{Icons|Gloom}} x 5 Owned || '''Uptie III''': When 1 ally with the fastest Speed attacks a target with {{StatusEffect|Sinking|b}}, deal +0.5% more damage for every 1 {{StatusEffect|Sinking|b}} on target (max 10%) <br/> '''Uptie IV''': When 1 ally with the fastest Speed attacks a target with {{StatusEffect|Sinking|b}}, deal +1% more damage for every 1 {{StatusEffect|Sinking|b}} on target (max 20%)
+|-
+| [[Zwei Assoc. West Section 3 Ishmael]] || {{SkillGrad|def|Emergency Protection}}
+| {{Icons|Pride}} x 3 Owned || At Combat Start, compare each Identity's current HP to their HP at the start of the previous turn. Then, apply 2 {{StatusEffect|Defense Level Up|b}} to the Identity with the greatest disparity of HP values between turns. 
+|}
+== Rodion ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Rodion]] || {{SkillGrad|def|Gambler}}
+| {{Icons|Wrath}} x 5 Owned || 1 ally with the most HP deals +20% damage with Heads Coins. 
+|-
+| [[Kurokumo Clan Wakashu Rodion]] || {{SkillGrad|def|Dark Cloud Swordsmanship}}
+| {{Icons|Gloom}} x 5 Owned || 1 ally with the lowest Speed deals +10% Slash damage. 
+|-
+| [[LCCB Assistant Manager Rodion]] || {{SkillGrad|def|Breaching}}
+| {{Icons|Envy}} x 5 Owned || 1 ally with the most HP deals +20% damage to enemies that used defense skills this turn. 
+|-
+| [[N Corp. Mittelhammer Rodion]] || {{SkillGrad|def|Rising Faith}}
+| {{Icons|Wrath}} x 3 Owned || After an enemy is defeated, apply 1 Haste and 1 Damage Up to the ally with the most SP. (Once per turn.) 
+|-
+| [[Rosespanner Workshop Rep. Rodion]] || {{SkillGrad|def|Resonant Spanner}}
+| {{Icons|Pride}} x 4 Owned || When 1 ally with the lowest Speed triggers Tremor Burst, increase the Stagger Threshold raise by +20%. 
+|-
+| [[Zwei Assoc. South Section 5 Rodion]] || {{SkillGrad|def|Designated Protection}}
+| {{Icons|Wrath}} x 3 Res || At the start of the combat phase, 1 ally with the lowest HP percentage gains 1 Shield per 1 Poise Count next turn. (Max 10) 
+|-
+| [[Dieci Assoc. South Section 4 Rodion]] || {{SkillGrad|def|Missionary of Knowledge}}
+| {{Icons|Gloom}} x 5 Owned || 1 ally with the highest Max HP gains Blunt DMG Up next turn based on the damage that they took this turn. (Shield damage included in the calculation. Maxes out when taking damage equal to 15% of Max HP at turn start. Max Blunt DMG Up gained by this effect: 3) 
+|-
+| [[Liu Assoc. South Section 4 Director Rodion]] || {{SkillGrad|def|Passionate Cheer}}
+| {{Icons|Wrath}} x 6 Owned || 1 ally with the least SP deals +5% Pierce damage for every 6 {{StatusEffect|Burn|b}} Potency on target On Hit (Max 15%) 
+|-
+| [[T Corp. Class 2 Collection Staff Rodion]] || {{SkillGrad|def|T Corp. Martial Arts}}
+| {{Icons|Sloth}} x 3 Res || To 1 ally with the fastest Speed: Clash Power +1 when Clashing against targets with 5+ {{StatusEffect|Tremor|b}} 
+|-
+| [[Devyat' Assoc. North Section 3 Rodion]] || {{SkillGrad|def|Outstanding Courier}}
+| {{Icons|Gluttony}} x 6 Owned || To 1 ally with the fastest Speed: Clash Power +1 to Skills that apply {{StatusEffect|Rupture|b}} Potency or Count 
+|}
+== Sinclair ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Sinclair]] || {{SkillGrad|def|Grudge}}
+| {{Icons|Pride}} x 3 Owned || 1 ally with the least SP gains 1 Attack Power Up the turn after an ally is defeated. 
+|-
+| [[Blade Lineage Salsu Sinclair]] || {{SkillGrad|def|Bloodied Hands}}
+| {{Icons|Pride}} x 3 Res || 1 ally with the lowest Speed gains +1 final Power for their last skill. 
+|-
+| [[Zwei Assoc. South Section 6 Sinclair]] || {{SkillGrad|def|Stubbornness}}
+| {{Icons|Gloom}} x 4 Owned || 1 ally with the least HP takes -10% damage. 
+|-
+| [[Los Mariachis Jefe Sinclair]] || {{SkillGrad|def|Jugar con Enemigos}}
+| {{Icons|Gloom}} x 4 Owned || 1 ally with the most SP deals +10% damage to enemies with lower SP. 
+|-
+| [[The One Who Shall Grip Sinclair]] || {{SkillGrad|def|Cornering}}
+| {{Icons|Wrath}} x 6 Owned || 1 ally with the least SP deals +10% Blunt damage. If said ally is below 0 SP, further boost their Blunt damage the lower their SP is. (Max 10%) 
+|-
+| [[Lobotomy E.G.O::Red Sheet Sinclair]] || {{SkillGrad|def|Wishing Talisman}}
+| {{Icons|Gluttony}} x 4 Res || At the start of the combat phase, give (Highest Reson. * 2) Talisman to the ally with the most HP. 
+|-
+| [[Molar Boatworks Fixer Sinclair]] || {{SkillGrad|def|Modified Power Output}}
+| {{Icons|Gloom}} x 4 Owned || 1 ally with the most Max HP inflicts +1 Tremor with the effects of their attack skills/coins. 
+|-
+| [[Cinq Assoc. South Section 4 Director Sinclair]] || {{SkillGrad|def|Too Slow}}
+| {{Icons|Pride}} x 3 Res || The fastest ally, On Evade, gains 1 {{StatusEffect|Haste|b}} next turn (Max 5) 
+|-
+| [[Dawn Office Fixer Sinclair]] || {{SkillGrad|def|Flaring Brand}}
+| {{Icons|Wrath}} x 3 Res || When the #1 Sinner to be Deployed Heads Hits, inflict +1 {{StatusEffect|Burn|b}} Count (4 times per turn) 
+|}
+== Outis ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Outis]] || {{SkillGrad|def|Military Mindset}}
+| {{Icons|Sloth}} x 5 Owned || 1 ally with the most HP deals +30% damage to enemies below 0 SP. 
+|-
+| [[Blade Lineage Salsu Outis]] || {{SkillGrad|def|Double Tap}}
+| {{Icons|Pride}} x 4 Owned || 1 ally with the most SP deals +30% damage to enemies below 25% HP. 
+|-
+| [[G Corp. Head Manager Outis]] || {{SkillGrad|def|Valor}}
+| {{Icons|Sloth}} x 4 Owned || 1 ally with the most HP randomly gains 1 Attack Power Up, 1 Defense Power Up, or 1 Protection at the start of the combat phase. 
+|-
+| [[Seven Assoc. South Section 6 Director Outis]] || {{SkillGrad|def|Relay Intelligence}}
+| {{Icons|Gluttony}} x 4 Owned || 1 ally with the highest Speed deals +10% damage when attacking a target with a damage type the target is “Weak” or “Fatal” to. 
+|-
+| [[Molar Office Fixer Outis]] || {{SkillGrad|def|Carrot & Stick}}
+| {{Icons|Sloth}} x 3 Owned || 1 ally with the most Tremor Count gains +1 more Tremor Count from Skill effects 
+|-
+| [[Cinq Assoc. South Section 4 Outis]] || {{SkillGrad|def|Mentor's Counsel}}
+| {{Icons|Pride}} x 3 Res || '''Uptie III''': If the fastest ally's Speed is higher than Speed of all enemies, the fastest ally gains Clash Power +1 <br/> '''Uptie IV''': If the fastest ally's Speed is higher than Speed of all enemies, the fastest ally gains Clash Power +1. If the said ally is a Cinq Association Fixer, the fastest ally deals +10% Pierce Damage
+|-
+| [[Lobotomy E.G.O::Magic Bullet Outis]] || {{SkillGrad|def|Request Work}}
+| {{Icons|Pride}} x 3 Res || '''Uptie III''': 1 ally with the most SP deals +10% damage with E.G.O Skills <br/> '''Uptie IV''': 1 ally with the most SP deals +10% damage with E.G.O Skills. If the E.G.O Skill consumes 7+ E.G.O resources, deal additional +5% damage
+|-
+| [[Wuthering Heights Chief Butler Outis]] || {{SkillGrad|def|Butler Training}}
+| {{Icons|Gloom}} x 4 Owned || Clash Power +1 to 1 ally with the most SP when clashing against targets with less than -25 SP 
+|-
+| [[The Ring Pointillist Student Outis]] || {{SkillGrad|def|Rough Sketch}}
+| {{Icons|Lust}} x 4 Owned || '''Uptie III''': 1 ally with the least SP heals 4 SP when defeating an enemy with {{StatusEffect|Bleed|b}}. Heal 1 additional SP for every type of negative effect on the target. (max 4. Once per turn) <br/> '''Uptie IV''': 1 ally with the least SP heals 4 SP when defeating an enemy with {{StatusEffect|Bleed|b}}. Heal 1 additional SP for every type of negative effect on the target. (max 4. 3 times per turn)
+|-
+| [[W Corp. L3 Cleanup Captain Outis]] || {{SkillGrad|def|Refraction}}
+| {{Icons|Envy}} x 4 Res || 1 ally who has the most {{StatusEffect|Charge|b}} Count at Turn Start: deal +10% more damage with Skills that consumed 7+ {{StatusEffect|Charge|b}} Count (once per turn) 
+|}
+== Gregor ==
+{| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
+! width="15%" | Identity
+! width="20%" | Name
+! width="80px" | Conditions
+! Description
+|-
+| [[LCB Sinner Gregor]] || {{SkillGrad|def|Gene Code G-0}}
+| {{Icons|Gloom}} x 3 Owned || At the start of the combat phase, the ally with the least HP heals 5 HP. 
+|-
+| [[Liu Assoc. South Section 6 Gregor]] || {{SkillGrad|def|Rushing Heart}}
+| {{Icons|Sloth}} x 5 Owned || 1 ally with the lowest Speed deals +30% damage with their 4th and subsequent Coins. 
+|-
+| [[G Corp. Manager Corporal Gregor]] || {{SkillGrad|def|Gene Code G-3}}
+| {{Icons|Gluttony}} x 4 Owned || The ally with the least HP heals 5 HP after winning a clash. 
+|-
+| [[R.B. Sous-chef Gregor]] || {{SkillGrad|def|Culinary Aid}}
+| {{Icons|Lust}} x 5 Owned || At the start of the combat phase, the ally with the least HP heals 5 HP. Boost the healing of R.B. Chef de Cuisine Ryōshū’s Passive ‘Rustle Up’ by 5. 
+|-
+| [[Rosespanner Workshop Fixer Gregor]] || {{SkillGrad|def|Sawblade Maintenance}}
+| {{Icons|Gluttony}} x 4 Owned || 1 ally with the lowest Speed inflicts +1 Rupture to targets with Tremor 
+|-
+| [[Zwei Assoc. South Section 4 Gregor]] || {{SkillGrad|def|Your Shield}}
+| {{Icons|Sloth}} x 5 Owned || If 1 ally with the highest Max HP is targeted by 2 or more attacks, gain 3 Defense Level Up 
+|-
+| [[Twinhook Pirates First Mate Gregor]] || {{SkillGrad|def|New Breathing Hole}}
+| {{Icons|Pride}} x 4 Owned || If 1 ally with the most Poise defeats an enemy, gain 1 Pierce DMG Up next turn. (Once per turn) 
+|-
+| [[Kurokumo Clan Captain Gregor]] || {{SkillGrad|def|Dark Cloud Style}}
+| {{Icons|Lust}} x 4 Owned || '''Uptie III''': When 1 ally with the slowest Speed hits an enemy with 10+ {{StatusEffect|Bleed|b}}, inflict 1 Offense Level Down next turn (3 times per turn) <br/> '''Uptie IV''': When 1 ally with the slowest Speed hits an enemy with 7+ {{StatusEffect|Bleed|b}}, inflict 1 Offense Level Down next turn (3 times per turn)
+|-
+| [[Edgar Family Heir Gregor]] || {{SkillGrad|def|Suffering}}
+| {{Icons|Gloom}} x 3 Owned || '''Uptie III''': Combat Start: 1 ally with the least SP loses 7 SP, then gains 1 {{StatusEffect|Gloom DMG Up|b}} <br/> '''Uptie IV''': Combat Start: 1 ally with the least SP loses 5 SP, then gains 1 {{StatusEffect|Gloom DMG Up|b}}
+|}
