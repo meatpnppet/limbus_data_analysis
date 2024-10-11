@@ -53,7 +53,25 @@ const cleanSkillData = (obj) => {
     for (let lang in obj['description']) {
         delete obj['description'][lang]['id'];
         for (let item of obj['description'][lang]['levelList']) {
-            delete item['description'];
+            if (item['desc'] === '') {
+                delete item['desc'];
+            }
+            for (let coinObj of item['coinlist']) {
+                if (coinObj['coindescs']) {
+                    let empty = true;
+                    for (let coin of coinObj['coindescs']) {
+                        if (coin['desc'] === '') {
+                            delete coin['desc'];
+                        }
+                        if (Object.keys(coin).length !== 0) {
+                            empty = false;
+                        }
+                    }
+                    if (empty) {
+                        delete coinObj['coindescs'];
+                    }
+                }
+            }
         }
     }
 };
