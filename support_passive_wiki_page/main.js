@@ -16,10 +16,9 @@ const COLLAPSED = false;
 
 let data = {};
 let output = `{{TabbedHeader
-|subpages = 1
-|tab1 = Support Passives by Sinner
-|tab2 = Support Passives by Effect}}
-`;
+| subpages = 1
+| tab1 = Support Passives by Sinner
+| tab2 = Support Passives by Effect}}`;
 
 for (let s of sinner) {
     data[s] = [];
@@ -30,7 +29,7 @@ for (let x of DATA) {
 }
 
 for (let s of sinner) {
-    output += `== ${s} ==\n`;
+    output += `\n\n== ${s} ==\n`;
     output += `{| class="lcbtable2 mw-collapsible ` + (COLLAPSED ? `mw-collapsed ` : ``) + `sortable" `;
     output += `style="width:100%; margin:auto" cellpadding="3"\n`;
     output += `! width="15%" | Identity\n`;
@@ -89,7 +88,7 @@ for (let s of sinner) {
             uptie4
         );
     }
-    output += `|}\n`;
+    output += `|}`;
 }
 
 fs.writeFileSync('generated/support_passive_wiki.txt', output, { encoding: 'utf-8', flag: 'w' });
@@ -97,8 +96,10 @@ fs.writeFileSync('generated/support_passive_wiki.txt', output, { encoding: 'utf-
 function template(character, id, name, sin, count, type, uptie3, uptie4) {
     return `|-\n`
         + `| [[${id} ${character}]] || {{SkillGrad|def|${name}}}\n`
-        + `| {{Icons|${affinity[sin]}}} x ${count} ${type} `
-        + ((uptie4 !== null) ? `|| '''Uptie III''': ${uptie3} ` : `|| ${uptie3} `)
-        + ((uptie4 !== null) ? `<br/> '''Uptie IV''': ${uptie4}` : ``)
+        + `| {{Icons|${affinity[sin]}}} x ${count} ${type}\n`
+        + `| `
+        + ((uptie4 !== null)
+            ? `'''Uptie III''': ${uptie3} <br/> '''Uptie IV''': ${uptie4}`
+            : `${uptie3}`)
         + `\n`;
 }

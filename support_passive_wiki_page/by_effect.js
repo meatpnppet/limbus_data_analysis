@@ -72,18 +72,18 @@ const targetKeywords = {
 
 let data = {};
 let output = `{{TabbedHeader
-|subpages = 1
-|rootpage = Identity Support Passives
-|tab1 = Support Passives by Sinner
-|tab2 = Support Passives by Effect}}
+| subpages = 1
+| rootpage = Identity Support Passives
+| tab1 = Support Passives by Sinner
+| tab2 = Support Passives by Effect}}
 
 {| class="lcbtable2 mw-collapsible sortable" style="width:100%; margin:auto" cellpadding="3"
-! | Effect 
-! | Target 
-! width="15%" | Identity 
-! width="10%" | Name 
-! width="40px" | Sin 
-! width="40px" | Type 
+! Effect
+! Target
+! width="15%" | Identity
+! width="10%" | Name
+! width="40px" | Sin
+! width="40px" | Type
 ! Description
 `;
 
@@ -186,9 +186,11 @@ fs.writeFileSync('generated/support_passive_wiki_effects.txt', output, { encodin
 function template(character, id, name, sin, count, type, uptie3, uptie4, effects, targets) {
     return `|-\n`
         + `| ${effects.join('')} || ${targets.join(' / ')}\n`
-        + `||[[${id} ${character}]] || ${name} `
-        + `|| {{Icons|${affinity[sin]}}} x ${count} || ${type} `
-        + ((uptie4 !== null) ? `|| '''Uptie III''': ${uptie3} ` : `|| ${uptie3} `)
-        + ((uptie4 !== null) ? `<br/> '''Uptie IV''': ${uptie4}` : ``)
+        + `| [[${id} ${character}]] || ${name}\n`
+        + `| {{Icons|${affinity[sin]}}} x ${count} || ${type}\n`
+        + `| `
+        + ((uptie4 !== null)
+            ? `'''Uptie III''': ${uptie3} <br/> '''Uptie IV''': ${uptie4}`
+            : `${uptie3}`)
         + `\n`;
 }
