@@ -15,10 +15,7 @@ const affinity = {
 const COLLAPSED = false;
 
 let data = {};
-let output = `{{TabbedHeader
-| subpages = 1
-| tab1 = Support Passives by Sinner
-| tab2 = Support Passives by Effect}}`;
+let output = `{{For|a similar list of E.G.O Passives|E.G.O Passives}}`;
 
 for (let s of sinner) {
     data[s] = [];

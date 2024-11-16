@@ -1,5 +1,28 @@
 const { KEYWORDS } = require('../generated/keywords.js');
 
+const buffs = [
+    'Poise',
+    'Charge',
+    'Aggro',
+    'Ammo',
+    'Haste',
+    'Insight',
+    'Defense Level Up',
+    'Blooming Thorn',
+    'Gloom DMG Up',
+];
+
+const debuffs = [
+    'Bleed',
+    'Sinking',
+    'Butterfly',
+    'Tremor',
+    'Burn',
+    'Rupture',
+    'Offense Level Down',
+    'Defense Level Down',
+];
+
 const helper = {
     cleanUptieDesc: (desc) => {
         let newDesc = desc;
@@ -13,10 +36,17 @@ const helper = {
         newDesc = newDesc.replaceAll(' .', '.');
         // Format status effects
         for (let keyword of KEYWORDS['EN']) {
-            newDesc = newDesc.replaceAll(`[${keyword['id']}]`, `[${keyword['name']}]`);
+            newDesc = newDesc.replaceAll(`[${keyword['id']}]`, `[${keyword['name'].trim()}]`);
         }
-        newDesc = newDesc.replaceAll(/\[(Offense Level Down) \]/g, '{{StatusEffect|$1|b}}');
-        newDesc = newDesc.replaceAll(/\[([^\]]+)\]/g, '{{StatusEffect|$1|b}}');
+        for (const b of buffs) {
+            const regex = new RegExp(`\\\[(${b})\\\]`, 'g');
+            newDesc = newDesc.replaceAll(regex, '{{StatusEffect|$1|b}}');
+        }
+        for (const d of debuffs) {
+            const regex = new RegExp(`\\\[(${d})\\\]`, 'g');
+            newDesc = newDesc.replaceAll(regex, '{{StatusEffect|$1|d}}');
+        }
+        newDesc = newDesc.replaceAll(`Blooming Thorn`, `Blooming Thorn (Ally)`);
         return newDesc;
     }
 };
