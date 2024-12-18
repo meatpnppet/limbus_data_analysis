@@ -10,6 +10,7 @@ const buffs = [
     'Defense Level Up',
     'Blooming Thorn',
     'Gloom DMG Up',
+    'Damage Up',
 ];
 
 const debuffs = [
@@ -27,7 +28,9 @@ const helper = {
     cleanUptieDesc: (desc) => {
         let newDesc = desc;
         newDesc = newDesc.replaceAll('\n', '. ');
+        newDesc = newDesc.replaceAll(/<Bloodfiend>/g, '[Bloodfiend]');
         newDesc = newDesc.replaceAll(/<[^>]+>/g, '');
+        newDesc = newDesc.replaceAll(/\[Bloodfiend\]/g, '<Bloodfiend>'); // I'll fix it later
         newDesc = newDesc.replaceAll(/^- /g, '');
         // Change bullet points into sentence breaks
         newDesc = newDesc.replaceAll(' - ', '. ');

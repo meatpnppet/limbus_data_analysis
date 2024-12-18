@@ -87,6 +87,7 @@ for (let s of sinner) {
     }
     output += `|}`;
 }
+output += `\n[[Category:Lists]]`;
 
 fs.writeFileSync('generated/support_passive_wiki.txt', output, { encoding: 'utf-8', flag: 'w' });
 
